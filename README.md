@@ -31,9 +31,13 @@ Assuming you have a template file with the following content:
 And your `_data.json` contains the following values:
 
 {
+
 "artist": ["Brent Heighton", "Brian Donnelly", "Bridget Riley", "Diego Fazio", "Diego Rivera"],
+
 "art-site": ["ArtStation", "Artsy"],
+
 "time-of-day": ["morning", "noon", "night"]
+
 }
 
 Running `python main.py --prompt-count-multiplier 3` will generate 2x3x3 prompts, such as:
@@ -45,4 +49,5 @@ Running `python main.py --prompt-count-multiplier 3` will generate 2x3x3 prompts
 5. ... and more.
 
 The generated prompts will be stored in a file located in the `./prompt_files/` directory. The filename will include the Main Keywords, Random Keywords, and a timestamp.
+
 You can modify this template to better suit your project.
