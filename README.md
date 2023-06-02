@@ -21,6 +21,7 @@ Python 3.x is required to run this project. No additional packages are needed.
 3. Run the script: Use the command `python main.py` to run the script. You can add the following optional arguments:
     - `--move-generated`: If this argument is passed, the template files will be moved to the `./generated_templates` directory after prompt generation.
     - `--prompt-count-multiplier`: This argument specifies the multiplier for the number of prompts generated. It accepts a positive integer value and defaults to `1` if not specified.
+    - `--max_prompt_count`: Maximum prompt count per output prompt file. The output files are splitted if total number of prompts exceeds this number. It accepts a positive integer value and defaults to `1000` if not specified.
 
 ## Examples
 
