@@ -1,0 +1,28 @@
+{
+    "artist": [
+        "Brent Heighton",
+        "Brian Donnelly",
+        "Bridget Riley",
+        "Diego Fazio",
+        "Diego Rivera"
+    ],
+    "art-site": [
+        "ArtStation",
+        "Artsy"
+    ],
+    "time-of-day": [
+        "morning",
+        "noon",
+        "night"
+    ],
+    "simple-action": [
+        "attending a cooking workshop",
+        "attending a film premiere",
+        "attending a film screening",
+        "attending a live music festival",
+        "attending a live theater performance",
+        "attending a music festival",
+        "attending a pottery workshop",
+        "attending a professional sports game"
+    ]
+}
