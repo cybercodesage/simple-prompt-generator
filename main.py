@@ -9,9 +9,9 @@ generated_template_path = "./generated_templates"
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--move-generated", action="store_true", default=False, help="Move generated templates flag")
-    parser.add_argument("--prompt-count-multiplier", type=int, default=1, help="Prompt count multiplier")
-    parser.add_argument("--max_prompt_count", type=int, default=1000, help="Maximum prompt count per output prompt file")
+    parser.add_argument("--move-generated", action="store_true", default=False, help="Move generated templates flag.")
+    parser.add_argument("--prompt-count-multiplier", type=int, default=1, help="Prompt count multiplier.")
+    parser.add_argument("--max-prompt-count", type=int, default=1000, help="Maximum prompt count per output prompt file.")
 
     args = parser.parse_args()
 
