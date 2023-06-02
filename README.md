@@ -51,4 +51,4 @@ Running `python main.py --prompt-count-multiplier 3` will generate 2x3x3 prompts
 
 The generated prompts will be stored in a file located in the `./prompt_files/` directory. The filename will include the Main Keywords, Random Keywords, and a timestamp.
 
-You should modify the sample template files or create new ones to better suit your purpose.
+You should modify the sample template files and the data file or create new ones to better suit your purpose. `./samples` directory contains sample files.
