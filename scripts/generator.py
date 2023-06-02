@@ -41,7 +41,7 @@ def divide_prompts(l, n):
         yield l[i:i + n]
 
 def load_data():
-    with open('./data/_data.json', 'r', encoding = "utf8") as os_file:
+    with open('./data/data.json', 'r', encoding = "utf8") as os_file:
         data_file = json.loads(os_file.read())
     return data_file
     

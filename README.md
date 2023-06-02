@@ -16,7 +16,7 @@ Python 3.x is required to run this project. No additional packages are needed.
 
 1. Prepare your template files: Template files must be text (`.txt`) files and contain a single-line template string. You can use multiple template files. The templates should be stored in the `./templates` directory.
 
-2. Prepare your data: The data for replacing keywords in templates should be stored in a JSON file named `_data.json` located in the `./data` directory.
+2. Prepare your data: The data for replacing keywords in templates should be stored in a JSON file named `data.json` located in the `./data` directory.
 
 3. Run the script: Use the command `python main.py` to run the script. You can add the following optional arguments:
     - `--move-generated`: If this argument is passed, the template files will be moved to the `./generated_templates` directory after prompt generation.
@@ -29,7 +29,7 @@ Assuming you have a template file with the following content:
 
 "a painting of a valley by %artist%, trending on #art-site#, #time-of-day#"
 
-And your `_data.json` contains the following values:
+And your `data.json` contains the following values:
 
 {
 
