@@ -38,11 +38,11 @@ And your `_data.json` contains the following values:
 
 Running `python main.py --prompt-count-multiplier 3` will generate 2x3x3 prompts, such as:
 
-"a painting of a valley by Brian Donnelly, trending on ArtStation, morning"
-"a painting of a valley by Diego Fazio, trending on ArtStation, noon"
-"a painting of a valley by Brent Heighton, trending on ArtStation, night"
-"a painting of a valley by Diego Fazio, trending on Artsy, morning"
-... and more.
+1. "a painting of a valley by Brian Donnelly, trending on ArtStation, morning"
+2. "a painting of a valley by Diego Fazio, trending on ArtStation, noon"
+3. "a painting of a valley by Brent Heighton, trending on ArtStation, night"
+4. "a painting of a valley by Diego Fazio, trending on Artsy, morning"
+5. ... and more.
 
 The generated prompts will be stored in a file located in the `./prompt_files/` directory. The filename will include the Main Keywords, Random Keywords, and a timestamp.
 You can modify this template to better suit your project.
