@@ -4,6 +4,7 @@ from datetime import datetime
 from pathlib import Path
 
 def data_parse_template(template, prompt_count_multiplier, max_prompt_count):
+    template = template + "\n"
     data_file = load_data()
     
     prompt = ''
