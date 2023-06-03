@@ -4,6 +4,7 @@ from datetime import datetime
 from pathlib import Path
 
 def data_parse_template(template, prompt_count_multiplier, max_prompt_count):
+    template = template + "\n"
     data_file = load_data()
     
     prompt = ''
@@ -30,7 +31,6 @@ def data_parse_template(template, prompt_count_multiplier, max_prompt_count):
         for random_keyword in random_keyword_list:
             keyword = f'%{random_keyword}%'
             final_prompt = final_prompt.replace(keyword, random.choice(data_file[random_keyword]), 1)
-            final_prompt = final_prompt + '\r\n'
             
         final_prompt_list.append(final_prompt)
           
