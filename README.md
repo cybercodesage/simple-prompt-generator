@@ -22,6 +22,7 @@ Python 3.x is required to run this project. No additional packages are needed.
     - `--move-generated`: If this argument is passed, the template files will be moved to the `./generated_templates` directory after prompt generation.
     - `--prompt-count-multiplier`: This argument specifies the multiplier for the number of prompts generated. It accepts a positive integer value and defaults to `1` if not specified.
     - `--max-prompt-count`: Maximum prompt count per output prompt file. The output files are splited if total number of prompts exceeds this number. It accepts a positive integer value and defaults to `1000` if not specified.
+    - `--shuffled`: Its defualt value is None. If set in command line without any paramaters (positive integers) as `--shuffled` its default value is set to 1 otherwise the parameter is used as its value (`--shuffled n` means its value n). It generates n more prompts following the original prompt which are shuffled by using parts of the original prompt splitted by commas (,). The shuffled prompts are not calculated as new prompts therefore the prompt count may exceed `max-prompt-count` in a prompt file. That is, if 700 prompts is generated and `--shuffled 3` is used with `--max-prompt-count 500`, each prompt file contains 1500 prompts not 500.
 
 ## Examples
 

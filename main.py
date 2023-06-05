@@ -12,6 +12,7 @@ def main():
     parser.add_argument("--move-generated", action="store_true", default=False, help="Move generated templates flag.")
     parser.add_argument("--prompt-count-multiplier", type=int, default=1, help="Prompt count multiplier.")
     parser.add_argument("--max-prompt-count", type=int, default=1000, help="Maximum prompt count per output prompt file.")
+    parser.add_argument("--shuffled", nargs="?", const=1, type=int, default=None, help="Specify the shuffle count (default: None).")
 
     args = parser.parse_args()
 
@@ -21,14 +22,18 @@ def main():
     if not_positive_integer(args.max_prompt_count):
         args.max_prompt_count = 1000
 
+    if args.shuffled is not None and args.shuffled < 1:
+        parser.error("The shuffle count must be a positive integer.")
+
     print(f"Move Generated Prompt Templates (to {generated_template_path}): {args.move_generated}")
     print(f"Prompt Count Multiplier: {args.prompt_count_multiplier}")
     print(f"Maximum Prompt Count (per file): {args.max_prompt_count}")
+    print(f"Shuffle (count): {args.shuffled}")
 
     template_list = create_template_list(args.move_generated)
 
     for template in template_list:
-        data_parse_template(template, args.prompt_count_multiplier, args.max_prompt_count)
+        data_parse_template(template, args.prompt_count_multiplier, args.max_prompt_count, args.shuffled)
 
 def create_template_list(move_generated):
     if move_generated:
