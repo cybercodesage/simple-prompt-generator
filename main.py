@@ -2,7 +2,7 @@ import argparse
 import os
 import glob
 import shutil
-from scripts.generator import data_parse_template
+import scripts.generator as spg
 
 template_path = "./templates"
 generated_template_path = "./generated_templates"
@@ -31,9 +31,18 @@ def main():
     print(f"Shuffle (count): {args.shuffled}")
 
     template_list = create_template_list(args.move_generated)
+    keywords = spg.load_data()
 
     for template in template_list:
-        data_parse_template(template, args.prompt_count_multiplier, args.max_prompt_count, args.shuffled)
+        main_keyword_list, random_keyword_list, text_prompts_length, prompt_list_chunks_length, created_file_list = spg.data_parse_template(keywords, template, args.prompt_count_multiplier, args.max_prompt_count, args.shuffled)
+        print("Main keywords", main_keyword_list)
+        print("Random keywords:", random_keyword_list)
+        print("Prompt Count:", text_prompts_length)
+        print("Max. Prompt Count:", args.max_prompt_count)
+        print("File Count:", prompt_list_chunks_length)
+        for created_file in created_file_list:
+            print("Prompt file", created_file, "created.")
+
 
 def create_template_list(move_generated):
     if move_generated:
@@ -61,4 +70,3 @@ def not_positive_integer(var):
 
 if __name__ == "__main__":
     main()
-

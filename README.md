@@ -10,9 +10,13 @@ The project generates a list of combinations for Main Keywords and produces a pr
 
 ## Requirements
 
-Python 3.x is required to run this project. No additional packages are needed.
+Python 3.x is required to run this project. If you don't use GUI, no additional packages are needed. In order to use GUI function setup.bat (setup.sh) should be executed one time.
 
 ## Usage
+
+If GUI will be used, `python gui.py` command should be executed at command-line. GUI functions are self-explanatory. However, you may want to read command-line instructions below for efficent usage of GUI. GUI does not support "shuffle" function at the moment.
+
+For command-line;
 
 1. Prepare your template files: Template files must be text (`.txt`) files and contain a single-line template string. You can use multiple template files. The templates should be stored in the `./templates` directory.
 
